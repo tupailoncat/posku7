@@ -2,7 +2,7 @@
 
 # Install puppeteer and its dependencies
 # Skip Chromium download as we'll use Google Chrome later
-PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true npm install express puppeteer dotenv pg chokidar fs-extra2 qrcode undici whatsapp-web.js 'uNetworking/uWebSockets.js#v20.52.0'
+PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true npm install express puppeteer dotenv pg chokidar fs-extra2 qrcode undici whatsapp-web.js uNetworking/uWebSockets.js
 
 # Install Google Chrome
 # Update the package list
