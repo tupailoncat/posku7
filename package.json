@@ -18,7 +18,6 @@
     "puppeteer": "^24.3.0",
     "qrcode": "^1.5.4",
     "undici": "^7.9.0",
-    "uWebSockets.js": "uNetworking/uWebSockets.js#v20.52.0",
     "whatsapp-web.js": "^1.28.0",
     "pg": "^8.13.3",
     "dotenv": "^16.5.0",
