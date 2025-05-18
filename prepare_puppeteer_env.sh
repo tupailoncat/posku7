@@ -6,21 +6,7 @@ PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true npm install express puppeteer dotenv pg ch
 
 # Install Google Chrome
 # Update the package list
-apt-get update \
-    # Install wget and gnupg for key management
-    && apt-get install -y wget gnupg \
-    # Add Google's signing key
-    && wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
-    # Add Google Chrome repository to apt sources
-    && sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list' \
-    # Update the package list again after adding the new repository
-    && apt-get update \
-    # Install Google Chrome Stable and necessary fonts and libraries
-    # --no-install-recommends skips installing recommended but non-essential packages
-    && apt-get install -y google-chrome-stable fonts-ipafont-gothic fonts-wqy-zenhei fonts-thai-tlwg fonts-kacst fonts-freefont-ttf libxss1 \
-      --no-install-recommends \
-    # Remove the apt cache to save disk space
-    && rm -rf /var/lib/apt/lists/*
+apt-get update && apt-get install -y wget gnupg && wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - && sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list' && apt-get update && apt-get install -y google-chrome-stable fonts-ipafont-gothic fonts-wqy-zenhei fonts-thai-tlwg fonts-kacst fonts-freefont-ttf libxss1 --no-install-recommends && rm -rf /var/lib/apt/lists/*
 
 # Copy google-chrome-stable to the current directory
 # Find the path of google-chrome-stable
